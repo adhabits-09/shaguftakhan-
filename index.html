@@ -6,7 +6,7 @@
   <title>Shgufta Khan - Learn, Earn & Shine ✨ | Women-Only Community</title>
   <meta name="description" content="Join 10K+ women earning ₹50K-₹1L monthly. Shgufta Khan helps homemakers become online money makers. Start today!">
 
-  <!-- Fonts (fixed: wght@700) -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -340,8 +340,8 @@ leadForm.addEventListener('submit',e=>{
   fd.append('source',sourceInfo.value||'Website');fd.append('timestamp',new Date().toISOString());
   fetch(GOOGLE_SCRIPT_URL,{method:'POST',body:fd,mode:'no-cors'}).catch(()=>{});
 
-  // 2. Meta Pixel - NO personal data sent
-  if(typeof fbq!=='undefined'){fbq('track','Lead',{content_name:'WhatsApp Form'});}
+  // 2. Meta Pixel - Faizeen jaisa 'Contact' event (no personal data sent)
+  if(typeof fbq!=='undefined'){fbq('track','Contact');}
 
   // 3. WhatsApp (full details)
   const msg=encodeURIComponent(
